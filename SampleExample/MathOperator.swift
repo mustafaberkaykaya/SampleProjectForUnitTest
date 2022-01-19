@@ -14,16 +14,13 @@ class MathOperator {
     
     func multipleNumbers(firstNumber: Int, secondNumber: Int) -> Int {
         return firstNumber * secondNumber
-
     }
     
     func differenceNumbers(firstNumber: Int, secondNumber: Int) -> Int {
         return firstNumber - secondNumber
-
     }
     
     func divideNumbers(firstNumber: Int, secondNumber: Int) -> Int {
         return firstNumber / secondNumber
-
     }
 }

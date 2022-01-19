@@ -48,7 +48,6 @@ class ViewController: UIViewController {
         multiplyButton.addTarget(self, action: #selector(multiplyTapped), for: .touchUpInside)
         divideButton.addTarget(self, action: #selector(divideTapped), for: .touchUpInside)
     }
-
 }
 
 extension ViewController {
@@ -85,7 +84,6 @@ extension ViewController {
         secondNumber = Int(secondTextField.text ?? "") ?? 0
         let result = MathOperator().addNumbers(firstNumber: firstNumber, secondNumber: secondNumber)
         resultLabel.text = "Result:\(result)"
-        
     }
     
     @objc
@@ -94,7 +92,6 @@ extension ViewController {
         secondNumber = Int(secondTextField.text ?? "") ?? 0
         let result = MathOperator().multipleNumbers(firstNumber: firstNumber, secondNumber: secondNumber)
         resultLabel.text = "Result:\(result)"
-       
     }
     
     @objc
@@ -103,7 +100,6 @@ extension ViewController {
         secondNumber = Int(secondTextField.text ?? "") ?? 0
         let result = MathOperator().differenceNumbers(firstNumber: firstNumber, secondNumber: secondNumber)
         resultLabel.text = "Result:\(result)"
-        
     }
     
     @objc
@@ -111,12 +107,10 @@ extension ViewController {
         firstNumber = Int(firstTextField.text ?? "") ?? 0
         secondNumber = Int(secondTextField.text ?? "") ?? 0
         if secondNumber == 0 || firstNumber == 0 {
-            resultLabel.text = "Result:"
+            resultLabel.text = "Result:0"
         } else {
             let result = MathOperator().divideNumbers(firstNumber: firstNumber, secondNumber: secondNumber)
             resultLabel.text = "Result:\(result)"
         }
-     
     }
-    
 }
