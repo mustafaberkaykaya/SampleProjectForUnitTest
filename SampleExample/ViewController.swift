@@ -39,6 +39,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         addSubViews()
+        
+        sumButton.addTarget(self, action: #selector(sumTapped), for: .touchUpInside)
+        difButton.addTarget(self, action: #selector(diffenceTapped), for: .touchUpInside)
+        multiplyButton.addTarget(self, action: #selector(multiplyTapped), for: .touchUpInside)
+        divideButton.addTarget(self, action: #selector(divideTapped), for: .touchUpInside)
     }
 
 }
@@ -70,4 +75,25 @@ extension ViewController {
         buttonStackView.addArrangedSubview(difButton)
         buttonStackView.addArrangedSubview(divideButton)
     }
+    
+    @objc
+    func sumTapped() {
+        print("Sum")
+    }
+    
+    @objc
+    func multiplyTapped() {
+       
+    }
+    
+    @objc
+    func diffenceTapped() {
+        
+    }
+    
+    @objc
+    func divideTapped() {
+     
+    }
+    
 }
