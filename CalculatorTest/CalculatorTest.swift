@@ -9,24 +9,57 @@ import XCTest
 @testable import SampleExample
 
 class CalculatorTest: XCTestCase {
-
+    var firstNumber = 0
+    var secondNumber = 0
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        firstNumber = 40
+        secondNumber = 20
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testAddExample() throws {
+
+        let result = MathOperator().addNumbers(firstNumber: firstNumber, secondNumber: secondNumber)
+        XCTAssertEqual(result,60)
+        XCTAssertNotNil(result)
+        XCTAssertLessThan(result, 100)
+        XCTAssertNotEqual(result, 600)
+    }
+    
+    func testDifferenceExample() throws {
+
+        let result = MathOperator().differenceNumbers(firstNumber: firstNumber, secondNumber: secondNumber)
+        XCTAssertEqual(result,20)
+        XCTAssertNotNil(result)
+        XCTAssertLessThan(result, 21)
+        XCTAssertNotEqual(result, 23)
+    }
+    
+    func testMultiplyExample() throws {
+
+        let result = MathOperator().multipleNumbers(firstNumber: firstNumber, secondNumber: secondNumber)
+        XCTAssertEqual(result,800)
+        XCTAssertNotNil(result)
+        XCTAssertLessThan(result, 802)
+        XCTAssertNotEqual(result, 0)
+    }
+    
+    func testDivideExample() throws {
+
+        let result = MathOperator().divideNumbers(firstNumber: firstNumber, secondNumber: secondNumber)
+        XCTAssertEqual(result,2)
+        XCTAssertNotNil(result)
+        XCTAssertLessThan(result, 3)
+        XCTAssertNotEqual(result, 3)
     }
 
     func testPerformanceExample() throws {
-        // This is an example of a performance test case.
+     
         measure {
-            // Put the code you want to measure the time of here.
+          
         }
     }
 
