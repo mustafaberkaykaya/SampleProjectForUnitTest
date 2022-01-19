@@ -34,6 +34,9 @@ class ViewController: UIViewController {
     private let difButton = UIButtonBuilder().title("-").backgroundColor(.brown).build()
     private let multiplyButton = UIButtonBuilder().title("*").backgroundColor(.cyan).build()
     private let divideButton = UIButtonBuilder().title("/").backgroundColor(.green).build()
+    
+    private var firstNumber: Int = 0
+    private var secondNumber: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,21 +81,41 @@ extension ViewController {
     
     @objc
     func sumTapped() {
-        print("Sum")
+        firstNumber = Int(firstTextField.text ?? "") ?? 0
+        secondNumber = Int(secondTextField.text ?? "") ?? 0
+        let result = MathOperator().addNumbers(firstNumber: firstNumber, secondNumber: secondNumber)
+        resultLabel.text = "Result:\(result)"
+        
     }
     
     @objc
     func multiplyTapped() {
+        firstNumber = Int(firstTextField.text ?? "") ?? 0
+        secondNumber = Int(secondTextField.text ?? "") ?? 0
+        let result = MathOperator().multipleNumbers(firstNumber: firstNumber, secondNumber: secondNumber)
+        resultLabel.text = "Result:\(result)"
        
     }
     
     @objc
     func diffenceTapped() {
+        firstNumber = Int(firstTextField.text ?? "") ?? 0
+        secondNumber = Int(secondTextField.text ?? "") ?? 0
+        let result = MathOperator().differenceNumbers(firstNumber: firstNumber, secondNumber: secondNumber)
+        resultLabel.text = "Result:\(result)"
         
     }
     
     @objc
     func divideTapped() {
+        firstNumber = Int(firstTextField.text ?? "") ?? 0
+        secondNumber = Int(secondTextField.text ?? "") ?? 0
+        if secondNumber == 0 || firstNumber == 0 {
+            resultLabel.text = "Result:"
+        } else {
+            let result = MathOperator().divideNumbers(firstNumber: firstNumber, secondNumber: secondNumber)
+            resultLabel.text = "Result:\(result)"
+        }
      
     }
     
