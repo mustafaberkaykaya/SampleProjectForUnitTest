@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6A6487EE27985B1C009FB50B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6487ED27985B1C009FB50B /* AppDelegate.swift */; };
 		6A6487F027985B1C009FB50B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6487EF27985B1C009FB50B /* SceneDelegate.swift */; };
 		6A6487F227985B1C009FB50B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6487F127985B1C009FB50B /* ViewController.swift */; };
-		6A6487F527985B1C009FB50B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A6487F327985B1C009FB50B /* Main.storyboard */; };
 		6A6487F727985B1F009FB50B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A6487F627985B1F009FB50B /* Assets.xcassets */; };
 		6A6487FA27985B1F009FB50B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A6487F827985B1F009FB50B /* LaunchScreen.storyboard */; };
 		6A64880827985BC7009FB50B /* CalculatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A64880727985BC7009FB50B /* CalculatorTest.swift */; };
@@ -34,7 +33,6 @@
 		6A6487ED27985B1C009FB50B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A6487EF27985B1C009FB50B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6A6487F127985B1C009FB50B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6A6487F427985B1C009FB50B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A6487F627985B1F009FB50B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A6487F927985B1F009FB50B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A6487FB27985B1F009FB50B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 				6A6487ED27985B1C009FB50B /* AppDelegate.swift */,
 				6A6487EF27985B1C009FB50B /* SceneDelegate.swift */,
 				6A6487F127985B1C009FB50B /* ViewController.swift */,
-				6A6487F327985B1C009FB50B /* Main.storyboard */,
 				6A6487F627985B1F009FB50B /* Assets.xcassets */,
 				6A6487F827985B1F009FB50B /* LaunchScreen.storyboard */,
 				6A6487FB27985B1F009FB50B /* Info.plist */,
@@ -120,7 +117,6 @@
 				291F648460ADA9ED1BC9D991 /* Pods-SampleExample.debug.xcconfig */,
 				1640C2F46C92B3CA7B30010A /* Pods-SampleExample.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -132,6 +128,7 @@
 			buildConfigurationList = 6A6487FE27985B1F009FB50B /* Build configuration list for PBXNativeTarget "SampleExample" */;
 			buildPhases = (
 				B3AF88BAAAADFFA988F39F53 /* [CP] Check Pods Manifest.lock */,
+				6A39DFB52798695D001DDC54 /* Run SwiftLint */,
 				6A6487E627985B1C009FB50B /* Sources */,
 				6A6487E727985B1C009FB50B /* Frameworks */,
 				6A6487E827985B1C009FB50B /* Resources */,
@@ -208,7 +205,6 @@
 			files = (
 				6A6487FA27985B1F009FB50B /* LaunchScreen.storyboard in Resources */,
 				6A6487F727985B1F009FB50B /* Assets.xcassets in Resources */,
-				6A6487F527985B1C009FB50B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +218,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6A39DFB52798695D001DDC54 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		6C329D53EFCE34D2DA3DEE22 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -293,14 +307,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6A6487F327985B1C009FB50B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6A6487F427985B1C009FB50B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6A6487F827985B1F009FB50B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
